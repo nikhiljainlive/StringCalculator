@@ -3,12 +3,15 @@ using CodingKata;
 
 namespace CodingKata
 {
+    [TestFixture]
     public class StringCalculatorTests
     {
-        [Test]
-        public void WhenCtorCallled_DoesNotThrow()
+        [TestCase]
+        public void Add_WhenPassedEmptyString_ReturnZero()
         {
-            Assert.DoesNotThrow(() => _ = new StringCalculator());
+            var stringCalculator = new StringCalculator();
+            var result = stringCalculator.Add("");
+            Assert.AreEqual(0, result);
         }
     }
 }

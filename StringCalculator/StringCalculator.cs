@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace CodingKata
+﻿namespace CodingKata
 {
     public class StringCalculator
     {
-        StringCalculator()
+        public object Add(string v)
         {
-            throw new NotImplementedException();
+            return 0;
         }
     }
 }

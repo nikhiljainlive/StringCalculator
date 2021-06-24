@@ -372,3 +372,8 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+.DS_Store
+string-calculator/.DS_Store
+string-calculator/src/.DS_Store
+string-calculator/src/main/.DS_Store
+string-calculator/src/main/java/.DS_Store
