@@ -21,5 +21,13 @@ namespace CodingKata
             var result = stringCalculator.Add("1");
             Assert.AreEqual(1, result);
         }
+
+        [TestCase]
+        public void Add_WhenPassedAnyNumberAsString_ReturnThatNumber()
+        {
+            var stringCalculator = new StringCalculator();
+            var result = stringCalculator.Add("2");
+            Assert.AreEqual(2, result);
+        }
     }
 }
