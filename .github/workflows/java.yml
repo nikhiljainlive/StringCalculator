@@ -1,6 +1,10 @@
 name: Java CI
 
-on: [push]
+on:
+  push:
+    branches: [ Java_Implementation ]
+  pull_request:
+    branches: [ Java_Implementation ]
 
 jobs:
   build:
