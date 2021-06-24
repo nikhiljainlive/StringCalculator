@@ -4,7 +4,10 @@
     {
         public object Add(string v)
         {
-            return 0;
+            if (v.Length == 0)
+                return 0;
+
+            return 1;
         }
     }
 }
