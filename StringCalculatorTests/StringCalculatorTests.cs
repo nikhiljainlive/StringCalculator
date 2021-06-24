@@ -24,7 +24,8 @@ namespace CodingKata
         }
 
         [TestCase("1,2", 3)]
-        public void Add_WhenPassedOneAndTwoAsString_ReturnThree(string input, int output)
+        [TestCase("3,4", 7)]
+        public void Add_WhenPassedTwoNumbersSeparatedByCommaAsString_ReturnSum(string input, int output)
         {
             var stringCalculator = new StringCalculator();
             var result = stringCalculator.Add(input);
