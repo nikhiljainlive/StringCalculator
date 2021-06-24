@@ -2,12 +2,14 @@
 {
     public class StringCalculator
     {
-        public object Add(string v)
+        public int Add(string numberString)
         {
-            if (v.Length == 0)
+            if (isStringEmpty(numberString))
                 return 0;
 
-            return int.Parse(v);
+            return int.Parse(numberString);
         }
+
+        public bool isStringEmpty(string input) => input.Length == 0;
     }
 }

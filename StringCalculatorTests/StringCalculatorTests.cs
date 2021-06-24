@@ -14,20 +14,13 @@ namespace CodingKata
             Assert.AreEqual(0, result);
         }
 
-        [TestCase]
-        public void Add_WhenPassedOneAsString_ReturnOne()
+        [TestCase("1", 1)]
+        [TestCase("2", 2)]
+        public void Add_WhenPassedNumberAsString_ReturnThatNumber(string input, int output)
         {
             var stringCalculator = new StringCalculator();
-            var result = stringCalculator.Add("1");
-            Assert.AreEqual(1, result);
-        }
-
-        [TestCase]
-        public void Add_WhenPassedAnyNumberAsString_ReturnThatNumber()
-        {
-            var stringCalculator = new StringCalculator();
-            var result = stringCalculator.Add("2");
-            Assert.AreEqual(2, result);
+            var result = stringCalculator.Add(input);
+            Assert.AreEqual(output, result);
         }
     }
 }
