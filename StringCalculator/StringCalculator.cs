@@ -2,19 +2,23 @@
 {
     public class StringCalculator
     {
+        public static char DELIMITER_COMMA = ',';
+
         public int Add(string numberString)
         {
-            if (isStringEmpty(numberString))
+            if (IsStringEmpty(numberString))
                 return 0;
 
-            if (numberString.Contains(",")) {
-                string[] tokens = numberString.Split(new char[] {','});
-                return int.Parse(tokens[0]) + int.Parse(tokens[1]);
+            if (numberString.Contains(DELIMITER_COMMA.ToString())) {
+                string[] tokens = numberString.Split(new char[] {DELIMITER_COMMA});
+                return StringToInt(tokens[0]) + StringToInt(tokens[1]);
             }
 
-            return int.Parse(numberString);
+            return StringToInt(numberString);
         }
 
-        public bool isStringEmpty(string input) => input.Length == 0;
+        public bool IsStringEmpty(string input) => input.Length == 0;
+
+        public int StringToInt(string input) => int.Parse(input);
     }
 }

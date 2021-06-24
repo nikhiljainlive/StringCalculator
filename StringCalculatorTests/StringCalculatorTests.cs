@@ -23,12 +23,12 @@ namespace CodingKata
             Assert.AreEqual(output, result);
         }
 
-        [TestCase]
-        public void Add_WhenPassedOneAndTwoAsString_ReturnThree()
+        [TestCase("1,2", 3)]
+        public void Add_WhenPassedOneAndTwoAsString_ReturnThree(string input, int output)
         {
             var stringCalculator = new StringCalculator();
-            var result = stringCalculator.Add("1,2");
-            Assert.AreEqual(3, result);
+            var result = stringCalculator.Add(input);
+            Assert.AreEqual(output, result);
         }
     }
 }
