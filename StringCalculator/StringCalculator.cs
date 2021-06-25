@@ -11,7 +11,13 @@
 
             if (numberString.Contains(DELIMITER_COMMA.ToString())) {
                 string[] tokens = numberString.Split(new char[] {DELIMITER_COMMA});
-                return StringToInt(tokens[0]) + StringToInt(tokens[1]);
+                int result = 0;
+
+                foreach (string token in tokens) {
+                    result += StringToInt(token);
+                }
+
+                return result;
             }
 
             return StringToInt(numberString);
