@@ -32,12 +32,13 @@ namespace CodingKata
             Assert.AreEqual(output, result);
         }
 
-        [TestCase]
-        public void Add_WhenPassedOneTwoAndThreeSeparatedByCommaAsString_ReturnSix()
+        [TestCase("1,2,3", 6)]
+        [TestCase("1,2,3,4,5,6,7", 28)]
+        public void Add_WhenPassedUnknownAmountOfNumbersSeparatedByCommaAsString_ReturnSum(string input, int output)
         {
             var stringCalculator = new StringCalculator();
-            var result = stringCalculator.Add("1,2,3");
-            Assert.AreEqual(6, result);
+            var result = stringCalculator.Add(input);
+            Assert.AreEqual(output, result);
         }
     }
 }
