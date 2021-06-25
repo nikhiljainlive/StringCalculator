@@ -10,7 +10,7 @@
                 return 0;
 
             if (numberString.Contains(DELIMITER_COMMA.ToString())) {
-                string[] tokens = numberString.Split(new char[] {DELIMITER_COMMA});
+                string[] tokens = ConvertToTokens(numberString);
                 int result = 0;
 
                 foreach (string token in tokens) {
@@ -23,8 +23,10 @@
             return StringToInt(numberString);
         }
 
-        public bool IsStringEmpty(string input) => input.Length == 0;
+        private bool IsStringEmpty(string input) => input.Length == 0;
 
-        public int StringToInt(string input) => int.Parse(input);
+        private int StringToInt(string input) => int.Parse(input);
+
+        private string[] ConvertToTokens(string input) => input.Split(new char[] { DELIMITER_COMMA });
     }
 }
