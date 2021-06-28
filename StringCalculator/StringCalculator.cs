@@ -10,6 +10,22 @@
             if (IsStringEmpty(numberString))
                 return 0;
 
+            if (numberString.StartsWith("//"))
+            {
+                string delimiter = numberString.Substring(2, 1);
+                string tokensString = numberString.Split('\n')[1];
+                string[] numbers = tokensString.Split(new string[] { delimiter },
+                    System.StringSplitOptions.None);
+
+                int sum = 0;
+                foreach (string token in numbers)
+                {
+                    sum += StringToInt(token);
+                }
+
+                return sum;
+            }
+
             string[] tokens = ConvertToTokens(numberString);
             int result = 0;
 
