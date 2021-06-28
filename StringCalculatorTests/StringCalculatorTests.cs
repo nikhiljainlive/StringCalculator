@@ -51,7 +51,8 @@ namespace CodingKata
         }
 
         [TestCase("1\n2", 3)]
-        public void Add_WhenPassedNumbersOneAndTwoSeparatedByNewLineAsString_ReturnThree(string input, int output)
+        [TestCase("1\n2\n3\n4\n5\n6\n7", 28)]
+        public void Add_WhenPassedUnknownAmountOfNumbersSeparatedByNewLineAsString_ReturnSum(string input, int output)
         {
             var stringCalculator = new StringCalculator();
             var result = stringCalculator.Add(input);
