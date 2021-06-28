@@ -40,5 +40,13 @@ namespace CodingKata
             var result = stringCalculator.Add(input);
             Assert.AreEqual(output, result);
         }
+
+        [TestCase]
+        public void Add_WhenPassedNumbersOneAndTwoSeparatedByCommaAndThreeSeparatedByNewLineAsString_ReturnSix()
+        {
+            var stringCalculator = new StringCalculator();
+            var result = stringCalculator.Add("1,2\n3");
+            Assert.AreEqual(6, result);
+        }
     }
 }

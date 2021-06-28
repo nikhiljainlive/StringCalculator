@@ -3,6 +3,7 @@
     public class StringCalculator
     {
         public static char DELIMITER_COMMA = ',';
+        public static char DELIMITER_NEW_LINE = '\n';
 
         public int Add(string numberString)
         {
@@ -27,6 +28,6 @@
 
         private int StringToInt(string input) => int.Parse(input);
 
-        private string[] ConvertToTokens(string input) => input.Split(new char[] { DELIMITER_COMMA });
+        private string[] ConvertToTokens(string input) => input.Split(new char[] { DELIMITER_COMMA, DELIMITER_NEW_LINE });
     }
 }
