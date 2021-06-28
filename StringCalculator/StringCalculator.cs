@@ -10,7 +10,7 @@
             if (IsStringEmpty(numberString))
                 return 0;
 
-            if (numberString.Contains(DELIMITER_COMMA.ToString())) {
+            if (numberString.Contains(DELIMITER_COMMA.ToString()) || numberString.Contains(DELIMITER_NEW_LINE.ToString())) {
                 string[] tokens = ConvertToTokens(numberString);
                 int result = 0;
 
